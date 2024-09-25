@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Heo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        table tr td {
+            border: 2px solid black;
+        }
+        thead {background-color: grey;}
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="searchText">
+        <input type="submit" value="Keresés">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>quote</td>
+                <td>author</td>
+            </tr>
+        </thead>
+    <% for (let index = 0; index < quotes.length; index++) { %>
+        <tr>
+            <td>
+                <%= quotes[index].id%>
+            </td>
+            <td>
+                <%= quotes[index].quote%>
+            </td>
+            <td>
+                <%= quotes[index].author%>
+            </td>
+        </tr>
+   
+    <% } %>
+    </table>
+</body>
+</html>

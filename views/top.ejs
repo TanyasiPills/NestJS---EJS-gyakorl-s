@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Heo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+            table tr td {
+            border: 2px solid black;
+            text-align: center;
+        }
+        thead {background-color: grey;}
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>author</td>
+                <td>count</td>
+            </tr>
+        </thead>
+    <% for (let index = 0; index < quote.length; index++) { %>
+        <tr>
+            <td>
+                <%= quote[index][0]%>
+            </td>
+            <td>
+                <%= quote[index][1]%>
+            </td>
+        </tr>
+   
+    <% } %>
+    </table>
+</body>
+</html>
